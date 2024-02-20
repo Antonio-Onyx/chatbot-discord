@@ -70,8 +70,6 @@ class ChatBot:
         intent = caso['intent']
         if intent == 'bienvenida':
             self.contexto = "BIENVENIDA"
-        #elif intent == 'chiste':
-        #    self.contexto = "CHISTE"
         elif intent == 'desconocido':
             self.contexto = "DEFAULT"  
 
@@ -104,8 +102,6 @@ class ChatBot:
         :rtype: str
         '''
         intent = caso['intent']
-        #if intent == 'chiste':
-        #    return contar_chiste()
         if intent == 'terminar':
             #print(despedida(user_input))
             return despedida(user_input)
@@ -121,8 +117,6 @@ class ChatBot:
         :return Texto que representa la respuesta
         :rtype str
         '''
-        #if self.contexto == 'CHISTE':
-        #    return 'Aquí va otro: ' + contar_chiste()
         if self.contexto == 'DEFAULT':
             return '¿Podrías tratar de expresarte mejor?'
         else:

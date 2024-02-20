@@ -3,7 +3,7 @@ from random import randrange
 
 def despedida(user_input):
     '''
-    Devuelve la despedida de glados
+    Devuelve la despedida de bocchi
 
     :param str user_input: El texto escrito por el usuario
     :return La despedida de glados
