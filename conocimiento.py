@@ -25,8 +25,8 @@ def conocimientoT():
                 r'que onda'
             ],
             'respuesta':[
-                'Hola! sere tu nuevo amigo, o al menos lo intentare :), asi que... que es lo que mas te gusta hacer?',
-                'Hey! que onda. Soy una IA que quiere tener tu amistad :), asi que empecemos por que me cuentes sobre tus pasatiempos'
+                'Hola! de que tienes antojo hoy? :p',
+                'Hey! que onda. Soy una IA con la que puedes hablar un poco sobre comida :p'
             ]
         },
         #////////////////////////////Fin
@@ -46,7 +46,7 @@ def conocimientoT():
                 r'.*'
             ],
             'respuesta':[
-                'Lo siento no he entendido :c',
+                'eso se come? xd',
                 'https://tenor.com/view/giga-gigacat-cat-mewing-mogging-gif-12429734670640119345'
             ]
         }
