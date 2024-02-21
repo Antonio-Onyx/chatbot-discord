@@ -28,7 +28,9 @@ def recomendaciones(user_input):
                     'que tal unos chilaquiles con bistek? xd',
                     'mmm que te parece una pechuguita empanizada con sus papitas? uwu',
                     'que tal una hamburguesa?',
-                    'que tal pasta con carne?']
+                    'que tal pasta con carne?',
+                    'unas empanadas de carne?';
+                    'unos tacos?']
     recom_definitiva = ''
     for i in antojo:
         if i in antojo_usuario:
