@@ -74,11 +74,78 @@ def conocimientoT():
                 r'.*c(ó|o)mo preparar (.*)',
                 r'.*c(ó|o)mo hago (.*)'
             ],
-            'respuesta':[
+            'respuesta':[                   
                 'si mi memoria no me falla, la receta de %1 seria...'
             ]
         },
-        #///////////////////////////desconocido
+        ########### intent para recomendar tipos de comida ################
+        {
+            'intent':'recomendar',
+            'regex':[
+                r'.*recomiendame.*',
+                r'.*recomiendas.*',
+                r'.*tipos de comidas.*'
+            ],
+            'respuesta':[                   ########## modificar despues de agregar mas intents ###################
+                'yo te recomendaria algo que lleve carne, mariscos o algun platillo vegetariano, porque es de lo unico que tengo conocimiento xd'
+            ]
+        },
+
+        #comento esto porque sera lo que pasemos a ResponseFunctions
+
+        ########## Agregar un nuevo intent para hablar sobre comida vegetariana ###################
+        # {
+        #     'intent': 'vegetariana',
+        #     'regex': [
+        #         r'.*comida vegetariana.*',
+        #         r'.*comida sin carne.*'
+        #     ],
+        #     'respuesta': [
+        #         'Algunas opciones de comida vegetariana son: ensalada César vegetariana, pizza vegetariana, tacos de frijoles, curry de verduras, si quieres pideme la receta de alguna c:.'
+        #     ]
+        # },
+        ############## Agregar un nuevo intent para solicitar la receta de comida vegetariana #############
+        # {
+        #     'intent': 'receta_vegetariana',
+        #     'regex': [
+        #         r'(.*)quiero la receta de (.*)',
+        #         r'(.*)cómo se hace (.*)',
+        #         r'.*receta de (.*)',
+        #         r'.*cómo preparar (.*)',
+        #         r'.*cómo hago (.*)'
+        #     ],
+        #     'respuesta': [
+        #         'Aquí tienes la receta de %1: '
+        #     ]
+        # },
+        ############## Agregar un nuevo intent para comida mariscos #############
+        # {
+        #     'intent': 'mariscos',
+        #     'regex': [
+        #         r'.*mariscos.*',
+        #         r'.*comida de mar.*'
+        #     ],
+        #     'respuesta': [
+        #         'Algunas opciones de comida de mar son: ceviche, camarones al ajillo, paella, sopa de mariscos, si quieres pideme la receta de alguna c:.'
+        #     ]
+        # },  
+        ############## Agregar un nuevo intent para solicitar la receta de comida de mar #############
+        # {
+        #     'intent': 'receta_mariscos',
+        #     'regex': [
+        #         r'(.*)quiero la receta de (.*)',
+        #         r'(.*)cómo se hace (.*)',
+        #         r'.*receta de (.*)',
+        #         r'.*cómo preparar (.*)',
+        #         r'.*cómo hago (.*)'
+        #     ],
+        #     'respuesta': [
+        #         'Aquí tienes la receta de %1: '
+        #     ]
+        # },
+
+
+        #////////////////////desconocido
         {
             'intent':'desconocido',
             'regex':[
