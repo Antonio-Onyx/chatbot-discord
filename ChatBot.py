@@ -99,9 +99,7 @@ class ChatBot:
         respuesta_cambiada = respuesta
         intent = caso['intent']
         match = self.regexp_selected.match(user_input)
-        if intent == 'estado':
-            respuesta_cambiada = respuesta_cambiada.replace('%1', match.group(1))
-        elif intent == 'recetas':
+        if intent == 'recetas':
             respuesta_cambiada = respuesta_cambiada.replace('%1', match.group(1))
         return respuesta_cambiada
 
