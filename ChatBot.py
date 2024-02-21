@@ -73,7 +73,12 @@ class ChatBot:
         elif intent == 'hambre':
             self.contexto = 'HAMBRE'
         elif intent == 'desconocido':
-            self.contexto = "DEFAULT"  
+            self.contexto = "DEFAULT" 
+        ############################################### agrego para vegetariana  ##############################  
+        elif intent == 'receta_vegetariana': #ve si el intento es sobre comida vegetariana
+            self.contexto = 'RECETA_VEGETARIANA' #cambia el contexto a comida vegetariana
+        elif intent == 'receta_mariscos': #ve si el intento es sobre comida de mariscos
+            self.contexto = 'RECETA_MARISCOS' #cambia el contexto a comida de mariscos        
 
     def convertir_respuesta(self, respuesta, caso, user_input):
         '''
@@ -108,6 +113,18 @@ class ChatBot:
             return recomendaciones(user_input)
         elif intent == 'terminar':
             return despedida(user_input)
+        ############################################### agrego para vegetariana ##############################
+        elif intent == 'receta_vegetariana': #ve si el intento es sobre comida vegetariana
+            match = self.regexp_selected.match(user_input) #obtiene el match de la expresión regular
+            comida = match.group(1) #obtiene el grupo 1 de la expresión regular
+            # llamamos a la función obtener_receta con el nombre de la comida
+            return self.obtener_receta(comida) #llama a la función obtener_receta
+        ############################################### agrego para mariscos ##############################
+        elif intent == 'receta_mariscos': #ve si el intento es sobre comida de mariscos
+            match = self.regexp_selected.match(user_input) 
+            comida = match.group(1)
+            return self.obtener_receta(comida)
+    
         return ''
 
 
@@ -124,6 +141,27 @@ class ChatBot:
         else:
             return '¿Podrías tratar de expresarte mejor?'
 
+    ##################### funcion para obtener la receta de la comida  ############################
+    def obtener_receta(self, comida):
+    # Aquí puedes implementar la lógica para obtener la receta de la comida especificada
+        recetas = {
+            'ensalada césar vegetariana': 'Ingredientes: lechuga, crutones, aderezo César vegetariano. Pasos: mezclar todos los ingredientes en un bol y disfrutar.',
+            'pizza vegetariana': 'Ingredientes: masa de pizza, tomate, mozzarella, champiñones, pimientos. Pasos: extender la masa, agregar los ingredientes y hornear.',
+            'tacos de frijoles': 'Ingredientes: tortillas de maíz, frijoles refritos, queso, salsa. Pasos: calentar las tortillas, agregar los frijoles y los demás ingredientes, doblar y disfrutar.',
+            'curry de verduras': 'Ingredientes: verduras variadas, leche de coco, curry en polvo. Pasos: saltear las verduras, agregar la leche de coco y el curry, cocinar a fuego lento hasta que estén tiernas.',
+            
+            'camarones al ajillo': 'Ingredientes: camarones, ajo, aceite de oliva, perejil. Pasos: saltear los camarones con el ajo y el aceite, espolvorear con perejil y servir.',
+            'ceviche': 'Ingredientes: pescado, limón, cebolla, cilantro, chile. Pasos: marinar el pescado en limón, agregar los demás ingredientes y servir.',
+            'paella': 'Ingredientes: arroz, mariscos variados, azafrán, pimiento, guisantes. Pasos: saltear los mariscos, agregar el arroz y el resto de los ingredientes, cocinar hasta que el arroz esté listo.',
+            'sopa de mariscos': 'Ingredientes: caldo de pescado, mariscos variados, verduras, ajo. Pasos: cocinar los mariscos en el caldo con las verduras y el ajo, servir caliente.'
+
+        }
+        # Busca la receta en el diccionario
+        if comida.lower() in recetas:
+            return recetas[comida.lower()]
+        else:
+            return 'Lo siento, no tengo la receta para esa comida.'
+        
 #---------------------------------------#
 #  Base de conocimiento                 #
 #---------------------------------------#
