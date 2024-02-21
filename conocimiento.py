@@ -46,7 +46,7 @@ def conocimientoT():
                 r'.*carne.*'
             ],
             'respuesta':[
-                'Dejame pensar en algunos tipos de comida que incluyan carne '
+                'Dejame pensar en algunos tipos de comida con carne '
             ]
         },
 
