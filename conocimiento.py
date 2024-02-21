@@ -39,6 +39,18 @@ def conocimientoT():
                 ''
             ]
         },
+        #/////////////////////////// antojo
+        {
+            'intent':'hambre',
+            'regex':[
+                r'.*tengo antojo.*',
+                r'.*me gustaria.*',
+                r'.*quisiera comer.*'
+            ],
+            'respuesta':[
+                'mmmm se me ocurre que tal vez te gustaria comer algo como'
+            ]
+        },
         #///////////////////////////desconocido
         {
             'intent':'desconocido',

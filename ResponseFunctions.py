@@ -17,3 +17,18 @@ def despedida(user_input):
         if i in despedida_usuario:
             despedida_definitiva = random.choice(despedida_glados)
     return despedida_definitiva
+
+def recomendaciones(user_input):
+    '''
+    da recomendaciones de comida dependiendo de que tenga antojo el usuario
+    '''
+    antojo = user_input.split()
+    antojo_usuario = ['carne']
+    recom_bocchi = ['no estaria mal que preparas una carnita asada',
+                    'que tal unos chilaquiles con bistek? xd',
+                    'mmm que te parece una pechuguita empanizada con sus papitas? uwu']
+    recom_definitiva = ''
+    for i in antojo:
+        if i in antojo_usuario:
+            recom_definitiva = random.choice(recom_bocchi)
+    return recom_definitiva
