@@ -45,10 +45,37 @@ def conocimientoT():
             'regex':[
                 r'.*tengo antojo.*',
                 r'.*me gustaria.*',
-                r'.*quisiera comer.*'
+                r'.*quisiera comer.*',
+                r'.*se me antoja.*'
             ],
             'respuesta':[
-                'mmmm se me ocurre que tal vez te gustaria comer algo como'
+                'pues mira, se me ocurre que tal vez te podria gustar...'
+            ]
+        },
+        #/////////////////////////// recomendaciones
+        {
+            'intent':'recomendar',
+            'regex':[
+                r'.*recomiendame.*',
+                r'.*recomiendas.*',
+                r'.*tipos de comidas.*'
+            ],
+            'respuesta':[
+                'yo te recomendaria algo que lleve carne, mariscos o algun platillo vegetariano, porque es de lo unico que tengo conocimiento xd'
+            ]
+        },
+        #///////////////////////////recetas
+        {
+            'intent':'recetas',
+            'regex':[
+                r'.*quiero la receta de (.*)',
+                r'.*c(ó|o)mo se hace (.*)',
+                r'.*receta de (.*)',
+                r'.*c(ó|o)mo preparar (.*)',
+                r'.*c(ó|o)mo hago (.*)'
+            ],
+            'respuesta':[
+                'si mi memoria no me falla, la receta de %1 seria...'
             ]
         },
         #///////////////////////////desconocido

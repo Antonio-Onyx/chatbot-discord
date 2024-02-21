@@ -4,7 +4,7 @@
 
 import string, re, random, sys
 from conocimiento import conocimientoT
-from ResponseFunctions import despedida, recomendaciones
+from ResponseFunctions import despedida, recomendaciones, obtener_receta
 
 class ChatBot:
     """
@@ -72,6 +72,10 @@ class ChatBot:
             self.contexto = "BIENVENIDA"
         elif intent == 'hambre':
             self.contexto = 'HAMBRE'
+        elif intent == 'recetas':
+            self.contexto = 'RECETAS'
+        elif intent == 'recomendar':
+            self.contexto = 'RECOMENDAR'
         elif intent == 'desconocido':
             self.contexto = "DEFAULT"  
 
@@ -91,6 +95,8 @@ class ChatBot:
         match = self.regexp_selected.match(user_input)
         if intent == 'estado':
             respuesta_cambiada = respuesta_cambiada.replace('%1', match.group(1))
+        elif intent == 'recetas':
+            respuesta_cambiada = respuesta_cambiada.replace('%1', match.group(1))
         return respuesta_cambiada
 
     def acciones(self, caso, user_input):
@@ -106,6 +112,8 @@ class ChatBot:
         intent = caso['intent']
         if intent == 'hambre':
             return recomendaciones(user_input)
+        elif intent == 'recetas':
+            return obtener_receta(user_input)
         elif intent == 'terminar':
             return despedida(user_input)
         return ''
