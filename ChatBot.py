@@ -4,7 +4,7 @@
 
 import string, re, random, sys
 from conocimiento import conocimientoT
-from ResponseFunctions import despedida
+from ResponseFunctions import despedida, recomendaciones
 
 class ChatBot:
     """
@@ -70,6 +70,8 @@ class ChatBot:
         intent = caso['intent']
         if intent == 'bienvenida':
             self.contexto = "BIENVENIDA"
+        elif intent == 'hambre':
+            self.contexto = 'HAMBRE'
         elif intent == 'desconocido':
             self.contexto = "DEFAULT"  
 
@@ -102,10 +104,10 @@ class ChatBot:
         :rtype: str
         '''
         intent = caso['intent']
-        if intent == 'terminar':
-            #print(despedida(user_input))
+        if intent == 'hambre':
+            return recomendaciones(user_input)
+        elif intent == 'terminar':
             return despedida(user_input)
-            #sys.exit(0)
         return ''
 
 

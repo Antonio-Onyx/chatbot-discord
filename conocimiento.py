@@ -39,6 +39,29 @@ def conocimientoT():
                 ''
             ]
         },
+        #////////////////////////////// Tipo carne 
+        {
+            'intent':'Tipo: carne',
+            'regex':[
+                r'.*carne.*'
+            ],
+            'respuesta':[
+                'Dejame pensar en algunos tipos de comida que incluyan carne '
+            ]
+        },
+
+        #/////////////////////////// antojo
+        {
+            'intent':'hambre',
+            'regex':[
+                r'.*tengo antojo.*',
+                r'.*me gustaria.*',
+                r'.*quisiera comer.*'
+            ],
+            'respuesta':[
+                'mmmm se me ocurre que tal vez te gustaria comer algo como'
+            ]
+        },
         #///////////////////////////desconocido
         {
             'intent':'desconocido',
