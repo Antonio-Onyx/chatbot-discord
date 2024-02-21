@@ -50,6 +50,7 @@ def conocimientoT():
             ]
         },
 
+
         #/////////////////////////// antojo
         {
             'intent':'hambre',

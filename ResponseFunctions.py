@@ -31,6 +31,7 @@ def recomendaciones(user_input):
                     'que tal pasta con carne?',
                     'unas empanadas de carne?';
                     'unos tacos?']
+                    'mmm que te parece una pechuguita empanizada con sus papitas? uwu']
     recom_definitiva = ''
     for i in antojo:
         if i in antojo_usuario:
