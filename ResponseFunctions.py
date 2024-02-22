@@ -28,13 +28,14 @@ def recomendaciones(user_input):
     antojo_usuario_mariscos = ['mariscos']
     #recomendaciones de platillos que lleven carne
     recom_carne_bocchi = ['no estaria mal que preparas una carnita asada',
-                    'que tal unos chilaquiles con bistek? xd',
-                    'mmm que te parece una pechuguita empanizada con sus papitas? uwu']
+                    'que tal unos chilaquiles con un filete de carne roja? UwU',
+                    'mmm ... que te parece una pechuguita empanizada con sus papitas?c:']
     #recomendaciones de platillos que sean veganos
     recom_vegana_bocchi = ['tal vez te guste una ensalada cesar',
                         'que te parece si pides una pizza vegetariana?',
-                        'que tal unos tacos con frijoles? son muy vegetarianos xd',
+                        'que tal unos tacos con frijoles? son muy vegetarianos :D',
                         'que tal un curry de verduras?',
+                           'porque no pruebas algo que lleve leguminosas, son un buen alimento',
     ]
     #recomendaciones de mariscos
     recom_mariscos_bocchi = [
