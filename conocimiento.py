@@ -26,7 +26,7 @@ def conocimientoT():
             ],
             'respuesta':[
                 'Hola! de que tienes antojo hoy? :p',
-                'Hey! que onda. Soy una IA con la que puedes hablar un poco sobre comida :p'
+                'Hey! que onda. Soy una IA que te puede recomendar algo de comer si tú no tienes idea :D'
             ]
         },
         #////////////////////////////Fin
@@ -39,17 +39,18 @@ def conocimientoT():
                 ''
             ]
         },
-        #/////////////////////////// antojo
+        #/////////////////////////// intent por si el usuario no tiene claro qué comer y quiere algo al azar
         {
-            'intent':'hambre',
+            'intent':'hambre_indeciso',
             'regex':[
-                r'.*tengo antojo.*',
-                r'.*me gustaria.*',
-                r'.*quisiera comer.*',
-                r'.*se me antoja.*'
+                r'.*(ni idea|tengo idea).*(comida|comer).*',
+                r'.*no se me ocurre.*(comer|comida).*',
+                r'.*estoy indeciso.*(comer|comida).*',
+                r'.*no s(e|é).*(comer|comida)',
+                r'.*no s(e|é).*(elige|escoge).*'
             ],
             'respuesta':[
-                'pues mira, se me ocurre que tal vez te podria gustar...'
+                'dejame pensar en algo rico pa hacer...'
             ]
         },
         #/////////////////////////// recomendaciones
@@ -58,10 +59,12 @@ def conocimientoT():
             'regex':[
                 r'.*recomiendame.*',
                 r'.*recomiendas.*',
-                r'.*tipos de comidas.*'
+                r'.*recomendar.*',
+                r'.*tipos de comidas.*',
+                r'.*qu(e|é) me.*(recomiendas|recomendar|recomendarias)'
             ],
             'respuesta':[
-                'yo te recomendaria algo que lleve carne, mariscos o algun platillo vegetariano, porque es de lo unico que tengo conocimiento xd'
+                'pues se me ocurren algunas cosas que podrian llevar carne, mariscos o algun platillo vegetariano, porque es de lo único que sé preparar xd'
             ]
         },
         #///////////////////////////recetas
@@ -78,71 +81,81 @@ def conocimientoT():
                 'si mi memoria no me falla, la receta de %1 seria...'
             ]
         },
-        ########### intent para recomendar tipos de comida ################
+        ########### por si queremos que nos de otra opcion de comida
         {
-            'intent':'recomendar',
-            'regex':[
-                r'.*recomiendame.*',
-                r'.*recomiendas.*',
-                r'.*tipos de comidas.*'
+            'intent': 'repetir',
+            'regex': [
+                r'.*(dime|no me gusta|dame|sabes).*(otr(a|o)).*',
+                r'.*no me gusta.*'
             ],
-            'respuesta':[                   ########## modificar despues de agregar mas intents ###################
-                'yo te recomendaria algo que lleve carne, mariscos o algun platillo vegetariano, porque es de lo unico que tengo conocimiento xd'
+            'respuesta': [
+                'ok, dejame pensarrrr... '
             ]
         },
-
-        #comento esto porque sera lo que pasemos a ResponseFunctions
+        ########### intent para recomendar tipos de comida ################
 
         ########## Agregar un nuevo intent para hablar sobre comida vegetariana ###################
-        # {
-        #     'intent': 'vegetariana',
-        #     'regex': [
-        #         r'.*comida vegetariana.*',
-        #         r'.*comida sin carne.*'
-        #     ],
-        #     'respuesta': [
-        #         'Algunas opciones de comida vegetariana son: ensalada César vegetariana, pizza vegetariana, tacos de frijoles, curry de verduras, si quieres pideme la receta de alguna c:.'
-        #     ]
-        # },
-        ############## Agregar un nuevo intent para solicitar la receta de comida vegetariana #############
-        # {
-        #     'intent': 'receta_vegetariana',
-        #     'regex': [
-        #         r'(.*)quiero la receta de (.*)',
-        #         r'(.*)cómo se hace (.*)',
-        #         r'.*receta de (.*)',
-        #         r'.*cómo preparar (.*)',
-        #         r'.*cómo hago (.*)'
-        #     ],
-        #     'respuesta': [
-        #         'Aquí tienes la receta de %1: '
-        #     ]
-        # },
-        ############## Agregar un nuevo intent para comida mariscos #############
-        # {
-        #     'intent': 'mariscos',
-        #     'regex': [
-        #         r'.*mariscos.*',
-        #         r'.*comida de mar.*'
-        #     ],
-        #     'respuesta': [
-        #         'Algunas opciones de comida de mar son: ceviche, camarones al ajillo, paella, sopa de mariscos, si quieres pideme la receta de alguna c:.'
-        #     ]
-        # },  
-        ############## Agregar un nuevo intent para solicitar la receta de comida de mar #############
-        # {
-        #     'intent': 'receta_mariscos',
-        #     'regex': [
-        #         r'(.*)quiero la receta de (.*)',
-        #         r'(.*)cómo se hace (.*)',
-        #         r'.*receta de (.*)',
-        #         r'.*cómo preparar (.*)',
-        #         r'.*cómo hago (.*)'
-        #     ],
-        #     'respuesta': [
-        #         'Aquí tienes la receta de %1: '
-        #     ]
-        # },
+        {
+            'intent': 'vegetariana',
+            'regex': [
+                r'.*comida vegetariana.*',
+                r'.*comida sin carne.*'
+            ],
+            'respuesta': [
+                ''
+            ]
+        },
+        ############ Agregar un nuevo intent para solicitar la receta de comida vegetariana #############
+        {
+            'intent': 'receta_vegetariana',
+            'regex': [
+                r'(.*)quiero la receta de (.*)',
+                r'(.*)cómo se hace (.*)',
+                r'.*receta de (.*)',
+                r'.*cómo preparar (.*)',
+                r'.*cómo hago (.*)'
+            ],
+            'respuesta': [
+                'Aquí tienes la receta de %1: '
+            ]
+        },
+        ############# Agregar un nuevo intent para comida mariscos #############
+        {
+            'intent': 'mariscos',
+            'regex': [
+                r'.*mariscos.*',
+                r'.*comida de mar.*'
+            ],
+            'respuesta': [
+                ''
+            ]
+        },  
+        ########### Agregar un nuevo intent para solicitar la receta de comida de mar #############
+        {
+            'intent': 'receta_mariscos',
+            'regex': [
+                r'(.*)quiero la receta de (.*)',
+                r'(.*)cómo se hace (.*)',
+                r'.*receta de (.*)',
+                r'.*cómo preparar (.*)',
+                r'.*cómo hago (.*)'
+            ],
+            'respuesta': [
+                'Aquí tienes la receta de %1: '
+            ]
+        },
+        ########## recomendaciones especificas para comida que lleve carne
+        {
+            'intent': 'carne',
+            'regex': [
+                r'.*carne.*',
+                r'.*carnoso.*',
+                r'.*carnivoro.*'
+            ],
+            'respuesta': [
+                ''
+            ]
+        },
 
 
         #////////////////////desconocido

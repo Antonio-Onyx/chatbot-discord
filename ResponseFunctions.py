@@ -18,25 +18,72 @@ def despedida(user_input):
             despedida_definitiva = random.choice(despedida_glados)
     return despedida_definitiva
 
-def recomendaciones(user_input):
+def recomendaciones_azar():
     '''
-    da recomendaciones de comida dependiendo de que tenga antojo el usuario
+    da recomendaciones de comida al azar
     '''
-    antojo = user_input.split()
-    antojo_usuario_carne = ['carne']
-    antojo_usuario_vegetariano = ['vegetariano','sin carne','vegano']
-    antojo_usuario_mariscos = ['mariscos']
     #recomendaciones de platillos que lleven carne
-    recom_carne_bocchi = ['no estaria mal que preparas una carnita asada',
+    recom_comida_bocchi = ['no estaria mal que preparas una carnita asada',
                     'que tal unos chilaquiles con un filete de carne roja? UwU',
-                    'mmm ... que te parece una pechuguita empanizada con sus papitas?c:']
-    #recomendaciones de platillos que sean veganos
+                    'mmm ... que te parece una pechuguita empanizada con sus papitas?c:',
+                    'tal vez te guste una ensalada cesar',
+                    'que te parece si pides una pizza? para algo rapido xd',
+                    'que tal unos tacos con frijoles? :D',
+                    'que tal un curry de verduras?',
+                    'porque no pruebas algo que lleve leguminosas, son un buen alimento', 
+                    'Se me ocurre unos camarones al ajillo',
+                    'que tal un ceviche?',
+                    'una paella no estaria nada mal',
+                    'una sopa de mariscos seria buena idea'
+    ]
+    
+    return random.choice(recom_comida_bocchi)
+
+
+def recomendaciones_carne(user_input):
+    '''
+    da recomendaciones de comida dependiendo de si
+    el usuario quiere algo que lleve carne
+    '''
+    #recomendaciones de platillos con carne
+    recom_carne_bocchi = ['no estaria mal que preparas una carnita asada',
+                        'que tal unos chilaquiles con un filete de carne roja? UwU',
+                        'mmm ... que te parece una pechuguita empanizada con sus papitas? c:',
+                        'Qué opinas de hacer unas Hamburguesas caseras?',
+                        'Bro, se me ocurre que unas fajitas con tiras de carne, pimientos y cebollas bien sazonadas serían una buena ídea :p']
+    
+    return random.choice(recom_carne_bocchi)
+
+def recomendaciones_veganas(user_input):
+    '''
+    da recomendaciones de comida dependiendo de si
+    el usuario quiere algo que sea vegano
+    '''
+
+    antojo = user_input.split()
+    antojo_usuario = ['vegetariano','sin carne','vegano']
+    #recomendaciones de platillos veganos
     recom_vegana_bocchi = ['tal vez te guste una ensalada cesar',
                         'que te parece si pides una pizza vegetariana?',
                         'que tal unos tacos con frijoles? son muy vegetarianos :D',
                         'que tal un curry de verduras?',
-                           'porque no pruebas algo que lleve leguminosas, son un buen alimento',
+                        'porque no pruebas algo que lleve leguminosas, son un buen alimento',
     ]
+    
+    recom_definitiva = ''
+    for i in antojo:
+        if i in antojo_usuario:
+            recom_definitiva = random.choice(recom_vegana_bocchi)
+    return recom_definitiva
+
+def recomendaciones_mariscos(user_input):
+    '''
+    da recomendaciones de comida dependiendo de si
+    el usuario quiere algo de mariscos
+    '''
+
+    antojo = user_input.split()
+    antojo_usuario = ['mariscos','mar']
     #recomendaciones de mariscos
     recom_mariscos_bocchi = [
                             'Se me ocurre unos camarones al ajillo',
@@ -46,13 +93,8 @@ def recomendaciones(user_input):
     ]
     
     recom_definitiva = ''
-
     for i in antojo:
-        if i in antojo_usuario_carne:
-            recom_definitiva = random.choice(recom_carne_bocchi)
-        elif i in antojo_usuario_vegetariano:
-            recom_definitiva = random.choice(recom_vegana_bocchi)
-        elif i in antojo_usuario_mariscos:
+        if i in antojo_usuario:
             recom_definitiva = random.choice(recom_mariscos_bocchi)
     return recom_definitiva
 
