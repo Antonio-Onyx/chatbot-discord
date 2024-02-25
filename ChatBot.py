@@ -81,15 +81,11 @@ class ChatBot:
         elif intent == "carne":
             self.contexto = "CARNE"
         elif intent == 'asiatica':
-            self.contexto = "ASIATICA"     
+            self.contexto = "ASIATICA"
+        elif intent == 'recetas':
+            self.contexto = 'RECETAS'     
         elif intent == 'desconocido':
-            self.contexto = "DEFAULT" 
-        #esto tambien lo comento porque no seria necesario
-        ############################################### agrego para vegetariana  ##############################  
-        # elif intent == 'receta_vegetariana': #ve si el intento es sobre comida vegetariana
-        #     self.contexto = 'RECETA_VEGETARIANA' #cambia el contexto a comida vegetariana
-        # elif intent == 'receta_mariscos': #ve si el intento es sobre comida de mariscos
-        #     self.contexto = 'RECETA_MARISCOS' #cambia el contexto a comida de mariscos        
+            self.contexto = "DEFAULT"        
 
     def convertir_respuesta(self, respuesta, caso, user_input):
         '''
@@ -136,6 +132,8 @@ class ChatBot:
             return recomendaciones_carne(user_input)
         elif intent == "asiatica":
             return recomendaciones_asiaticas(user_input)
+        elif intent == "recetas":
+            return obtener_receta(user_input)
         
         return ''
 

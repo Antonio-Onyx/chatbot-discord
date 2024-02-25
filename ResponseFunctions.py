@@ -150,7 +150,7 @@ def obtener_receta(user_input):
     }
 
     recetas_asiaticas = {
-            'sushi': 'Ingredientes: arroz, alga nori, pescado, verduras. Pasos: cocinar el arroz, armar los rollos con los demás ingredientes y cortar en piezas.',
+            'sushi': 'Ingredientes: arroz, alga nori, pescado, verduras. \nPasos: cocinar el arroz, armar los rollos con los demás ingredientes y cortar en piezas.',
             'ramen': 'Ingredientes: fideos, caldo, carne de cerdo, huevo. Pasos: cocinar los fideos, agregar el caldo y los demás ingredientes, servir caliente.',
             'pollo agridulce': 'Ingredientes: pollo, piña, pimiento, salsa agridulce. Pasos: saltear el pollo con los vegetales, agregar la piña y la salsa, servir con arroz.',
             'rollitos primavera': 'Ingredientes: verduras, carne de cerdo, masa de rollitos. Pasos: armar los rollitos con los ingredientes y freír.'
@@ -172,5 +172,5 @@ def obtener_receta(user_input):
     for platillo, receta in recetas_asiaticas.items():
         if platillo in user_input or user_input in platillo:
             return receta  
-          
+
     return 'Ni idea de como se prepare eso, pa'
