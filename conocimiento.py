@@ -25,8 +25,8 @@ def conocimientoT():
                 r'que onda'
             ],
             'respuesta':[
-                'Hola! soy una IA que te puede dar recomendaciones de comida Yummi! :D',
-                'Hey! que onda. Soy una IA que te puede recomendar algo de comer si tú no tienes idea  Yey! :D'
+                'Hola! soy una IA que te puede dar recomendaciones de comida Yummi! ^_^',
+                'Hey! que onda. Soy una IA que te puede recomendar algo de comer si tú no tienes idea  Yey! ^_^'
             ]
         },
         #////////////////////////////Fin
@@ -75,15 +75,16 @@ def conocimientoT():
             'intent':'recetas',
             'regex':[
                 r'.*quiero la receta de (.*)',
-                r'.*c(ó|o)mo se hace (.*)',
+                r'.*como se hace (.*)',
                 r'.*receta de (.*)',
-                r'.*c(ó|o)mo preparar (.*)',
+                r'.*como preparar (.*)',
                 r'.*me interesa saber cómo se hace (.*)',
                 r'.*dime como se hace (.*)',
-                r'.*¿podrías darmela receta de (.*)?',
+                r'.*¿podrias darmela receta de (.*)?',
                 r'.*se me antoja un(.*)',
                 r'.*muestrame la receta(.*)',
-                r'.*c(ó|o)mo hago (.*)'
+                r'.*como hago (.*)',
+                r'.*como preparo.* (.*)'
             ],
             'respuesta':[                   
                 'si mi memoria no me falla, la receta de %1 seria...',
@@ -98,7 +99,7 @@ def conocimientoT():
                 r'.*no me gusta.*'
             ],
             'respuesta': [
-                'ok, dejame pensarrrr... '
+                ''
             ]
         },
         ########### intent para recomendar tipos de comida ################
@@ -160,6 +161,22 @@ def conocimientoT():
                 ''
             ]
         },
+        #////////////////////aceptacion
+        {
+            'intent':'aceptacion',
+            'regex':[
+                r'.*va.*',
+                r'.*eso me gusta.*',
+                r'.*me parece bien.*',
+                r'.*suena rico.*',
+                r'.*eso suena bien.*'
+            ],
+            'respuesta':[
+                'genial, tambien de podria dar la receta si gustas preparalo :)',
+                'Perfecto! Si quieres, también puedo proporcionarte la receta para que puedas prepararlo tú mismo. :)',
+                '¡Fantástico! Si estás interesado, incluso puedo compartir contigo la receta ;)'
+            ]
+        },
         #////////////////////desconocido
         {
             'intent':'desconocido',
@@ -167,8 +184,7 @@ def conocimientoT():
                 r'.*'
             ],
             'respuesta':[
-                'perdona pero no he entendido eso',
-                'https://tenor.com/view/giga-gigacat-cat-mewing-mogging-gif-12429734670640119345'
+                'perdona pero no he entendido eso'
             ]
         }
     ]
