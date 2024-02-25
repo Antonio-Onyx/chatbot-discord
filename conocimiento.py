@@ -25,8 +25,8 @@ def conocimientoT():
                 r'que onda'
             ],
             'respuesta':[
-                'Hola! de que tienes antojo hoy? :p',
-                'Hey! que onda. Soy una IA que te puede recomendar algo de comer si tú no tienes idea :D'
+                'Hola! soy una IA que te puede dar recomendaciones de comida Yummi! :D',
+                'Hey! que onda. Soy una IA que te puede recomendar algo de comer si tú no tienes idea  Yey! :D'
             ]
         },
         #////////////////////////////Fin
@@ -51,7 +51,7 @@ def conocimientoT():
                 r'.*no s(e|é).*(elige|escoge).*'
             ],
             'respuesta':[
-                'dejame pensar en algo rico pa hacer...'
+                ''
             ]
         },
         #/////////////////////////// recomendaciones
@@ -86,7 +86,8 @@ def conocimientoT():
                 r'.*c(ó|o)mo hago (.*)'
             ],
             'respuesta':[                   
-                'si mi memoria no me falla, la receta de %1 seria...'
+                'si mi memoria no me falla, la receta de %1 seria...',
+                'Mira, esto es lo que necesitas para hacer %1'
             ]
         },
         ########### por si queremos que nos de otra opcion de comida
@@ -115,24 +116,7 @@ def conocimientoT():
                 ''
             ]
         },
-        ############ Agregar un nuevo intent para solicitar la receta de comida vegetariana #############
-        {
-            'intent': 'receta_vegetariana',
-            'regex': [
-                r'(.*)quiero la receta de (.*)',
-                r'(.*)cómo se hace (.*)',
-                r'.*receta de (.*)',
-                r'.*cómo preparar (.*)',
-                r'.*cómo hago (.*)',
-                r'.*me interesa saber cómo se hace (.*)',
-                r'.*¿podrías darmela receta de (.*)?',
-                r'.*se me antoja un(.*)'
-                r'.*cómo hago (.*)'
-            ],
-            'respuesta': [
-                'Aquí tienes la receta de %1: '
-            ]
-        },
+        
         ############# Agregar un nuevo intent para comida mariscos #############
         {
             'intent': 'mariscos',
@@ -149,24 +133,7 @@ def conocimientoT():
                 ''
             ]
         },  
-        ########### Agregar un nuevo intent para solicitar la receta de comida de mar #############
-        {
-            'intent': 'receta_mariscos',
-            'regex': [
-                r'(.*)quiero la receta de (.*)',
-                r'(.*)cómo se hace (.*)',
-                r'.*receta de (.*)',
-                r'.*cómo preparar (.*)',
-                r'.*¿dónde puedo encontrar la receta de (.*)?',
-                r'.*(.*) es lo que quiero hacer, ¿cómo se hace?',
-                r'.*podrias decirme cómo se hace (.*)?',
-                r'.*podrias darme la receta de (.*)?',
-                r'.*cómo hago (.*)'
-            ],
-            'respuesta': [
-                'Aquí tienes la receta de %1: '
-            ]
-        },
+        
         ########## recomendaciones especificas para comida que lleve carne
         {
             'intent': 'carne',
@@ -193,28 +160,6 @@ def conocimientoT():
                 ''
             ]
         },
-        ########### Agregar un nuevo intent para solicitar la receta de comida asiatica #############
-        {
-            'intent': 'receta_asiatica',
-            'regex': [
-                r'(.*)quiero la receta de (.*)',
-                r'(.*)cómo se hace (.*)',
-                r'.*receta de (.*)',
-                r'.*cómo preparar (.*)',
-                r'.* ¿dónde puedo encontrar la receta de (.*)?',
-                r'.*(.*) es lo que quiero hacer, ¿cómo se hace?',
-                r'.*podrias decirme cómo se hace (.*)?',
-                r'.*podrias darme la receta de (.*)?',
-
-                r'.*cómo hago (.*)'
-            ],
-            'respuesta': [
-                'Aquí tienes la receta de %1: '
-            ]
-        },
-    
-
-
         #////////////////////desconocido
         {
             'intent':'desconocido',
@@ -222,7 +167,7 @@ def conocimientoT():
                 r'.*'
             ],
             'respuesta':[
-                'eso se come? xd',
+                'perdona pero no he entendido eso',
                 'https://tenor.com/view/giga-gigacat-cat-mewing-mogging-gif-12429734670640119345'
             ]
         }
