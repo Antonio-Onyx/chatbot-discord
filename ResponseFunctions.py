@@ -11,7 +11,7 @@ def despedida(user_input):
     '''
     des = user_input.split()
     despedida_usuario = ['adios', 'bye', 'hasta luego', 'adiós']
-    despedida_glados = ['Bye! espero que comas algo delicioso','Regresa pronto, pero con comida, si no no regreses juajuas']
+    despedida_glados = ['Bye! espero que comas algo delicioso -‿-','Regresa pronto, pero con comida, si no no regreses juajuas -‿-']
     despedida_definitiva = ''
     for i in des:
         if i in despedida_usuario:
@@ -23,23 +23,23 @@ def recomendaciones_azar():
     da recomendaciones de comida al azar
     '''
     #recomendaciones de platillos que lleven carne
-    recom_comida_bocchi = ['no estaria mal que preparas una carnita asada',
-                    'que tal unos chilaquiles con carne?',
-                    'mmm ... que te parece una pechuga empanizada? c:',
-                    'tal vez te guste una ensalada cesar',
+    recom_comida_bocchi = ['no estaria mal que preparas una carnita asada ᕙ(`▿´)ᕗ',
+                    'que tal unos chilaquiles con carne? ᕙ(`▿´)ᕗ',
+                    'mmm ... que te parece una pechuga empanizada? ^_^',
+                    'tal vez te guste una ensalada cesar ｡◕‿◕｡',
                     'que te parece una pizza vegetariana?',
-                    'que tal unos tacos con frijoles? :D',
-                    'que tal un curry de verduras?',
+                    'que tal unos tacos con frijoles? ^_^',
+                    'que tal un curry de verduras? :o',
                     'Se me ocurre unos camarones al ajillo',
-                    'que tal un ceviche?',
+                    'que tal un ceviche? :)',
                     'una paella no estaria nada mal',
                     'una sopa de mariscos seria buena idea',
-                    'que tal un sushi?',
-                    'un ramen no estaria nada mal',
-                    'pollo agridulce?',
+                    'que tal un sushi? ;)',
+                    'un ramen no estaria nada mal ;)',
+                    'pollo agridulce? (ㆆ_ㆆ)',
                     'rollitos primavera?',
                     'unas fajitas de carne :p',
-                    'Qué opinas de hacer unas Hamburguesas caseras?'
+                    'Qué opinas de hacer unas Hamburguesas caseras? ( ͡° ͜ʖ ͡°)'
 
     ]
     
@@ -126,32 +126,32 @@ def obtener_receta(user_input):
     '''Funcion que te devuelve la receta del platillo que quieres'''
 
     recetas_veganas = {
-            'ensalada cesar vegetariana': '__**Ingredientes:**__ lechuga, crutones, aderezo César vegetariano. __**Pasos:**__ mezclar todos los ingredientes en un bol y disfrutar.',
-            'pizza vegetariana': '__**Ingredientes:**__ masa de pizza, tomate, mozzarella, champiñones, pimientos. __**Pasos:**__ extender la masa, agregar los ingredientes y hornear.',
-            'tacos de frijoles': '__**Ingredientes:**__ tortillas de maíz, frijoles refritos, queso, salsa. __**Pasos:**__ calentar las tortillas, agregar los frijoles y los demás ingredientes, doblar y disfrutar.',
-            'curry de verduras': '__**Ingredientes:**__ verduras variadas, leche de coco, curry en polvo. __**Pasos:**__ saltear las verduras, agregar la leche de coco y el curry, cocinar a fuego lento hasta que estén tiernas.'
+            'ensalada cesar vegetariana': '__**Ingredientes:**__ lechuga, crutones, aderezo César vegetariano. \n__**Pasos:**__ mezclar todos los ingredientes en un bol y disfrutar.',
+            'pizza vegetariana': '__**Ingredientes:**__ masa de pizza, tomate, mozzarella, champiñones, pimientos. \n__**Pasos:**__ extender la masa, agregar los ingredientes y hornear.',
+            'tacos de frijoles': '__**Ingredientes:**__ tortillas de maíz, frijoles refritos, queso, salsa. \n__**Pasos:**__ calentar las tortillas, agregar los frijoles y los demás ingredientes, doblar y disfrutar.',
+            'curry de verduras': '__**Ingredientes:**__ verduras variadas, leche de coco, curry en polvo. \n__**Pasos:**__ saltear las verduras, agregar la leche de coco y el curry, cocinar a fuego lento hasta que estén tiernas.'
     }
     
     recetas_mariscos = {
-            'camarones al ajillo': '__**Ingredientes:**__ camarones, ajo, aceite de oliva, perejil. __**Pasos:**__ saltear los camarones con el ajo y el aceite, espolvorear con perejil y servir.',
-            'ceviche': '__**Ingredientes:**__ pescado, limón, cebolla, cilantro, chile. __**Pasos:**__ marinar el pescado en limón, agregar los demás ingredientes y servir.',
-            'paella': '__**Ingredientes:**__ arroz, mariscos variados, azafrán, pimiento, guisantes. __**Pasos:**__ saltear los mariscos, agregar el arroz y el resto de los ingredientes, cocinar hasta que el arroz esté listo.',
-            'sopa de mariscos': '__**Ingredientes:**__ caldo de pescado, mariscos variados, verduras, ajo. __**Pasos:**__ cocinar los mariscos en el caldo con las verduras y el ajo, servir caliente.'
+            'camarones al ajillo': '__**Ingredientes:**__ camarones, ajo, aceite de oliva, perejil. \n__**Pasos:**__ saltear los camarones con el ajo y el aceite, espolvorear con perejil y servir.',
+            'ceviche': '__**Ingredientes:**__ pescado, limón, cebolla, cilantro, chile. \n__**Pasos:**__ marinar el pescado en limón, agregar los demás ingredientes y servir.',
+            'paella': '__**Ingredientes:**__ arroz, mariscos variados, azafrán, pimiento, guisantes. \n__**Pasos:**__ saltear los mariscos, agregar el arroz y el resto de los ingredientes, cocinar hasta que el arroz esté listo.',
+            'sopa de mariscos': '__**Ingredientes:**__ caldo de pescado, mariscos variados, verduras, ajo. \n__**Pasos:**__ cocinar los mariscos en el caldo con las verduras y el ajo, servir caliente.'
     }
 
     recetas_carne = {
-            'carnita asada': '__**Ingredientes:**__ carne de res, sal, pimienta, limón. __**Pasos:**__ sazonar la carne, asarla a la parrilla y servir con limón.',
-            'chilaquiles con carne': '__**Ingredientes:**__ tortillas de maíz, salsa, carne de res, crema. __**Pasos:**__ freír las tortillas, agregar la salsa y la carne, servir con crema.',
-            'pechuguita empanizada': '__**Ingredientes:**__ pechugas de pollo, huevo, pan molido. __**Pasos:**__ empanizar las pechugas, freír y servir.',
-            'hamburguesas caseras': '__**Ingredientes:**__ carne molida, pan para hamburguesa, lechuga, jitomate. __**Pasos:**__ formar las hamburguesas, asarlas y servir en el pan con los demás ingredientes.',
-            'fajitas de carne': '__**Ingredientes:**__ carne de res, pimientos, cebolla, tortillas de harina. __**Pasos:**__ saltear la carne con los vegetales, servir en las tortillas.'
+            'carnita asada': '__**Ingredientes:**__ carne de res, sal, pimienta, limón. \n__**Pasos:**__ sazonar la carne, asarla a la parrilla y servir con limón.',
+            'chilaquiles con carne': '__**Ingredientes:**__ tortillas de maíz, salsa, carne de res, crema. \n__**Pasos:**__ freír las tortillas, agregar la salsa y la carne, servir con crema.',
+            'pechuga empanizada': '__**Ingredientes:**__ pechugas de pollo, huevo, pan molido. \n__**Pasos:**__ empanizar las pechugas, freír y servir.',
+            'hamburguesas caseras': '__**Ingredientes:**__ carne molida, pan para hamburguesa, lechuga, jitomate. \n__**Pasos:**__ formar las hamburguesas, asarlas y servir en el pan con los demás ingredientes.',
+            'fajitas de carne': '__**Ingredientes:**__ carne de res, pimientos, cebolla, tortillas de harina. \n__**Pasos:**__ saltear la carne con los vegetales, servir en las tortillas.'
     }
 
     recetas_asiaticas = {
             'sushi': '__**Ingredientes:**__ arroz, alga nori, pescado, verduras. \n__**Pasos:**__ cocinar el arroz, armar los rollos con los demás ingredientes y cortar en piezas.',
-            'ramen': '__**Ingredientes:**__ fideos, caldo, carne de cerdo, huevo. __**Pasos:**__ cocinar los fideos, agregar el caldo y los demás ingredientes, servir caliente.',
-            'pollo agridulce':'__**Ingredientes:**__ pollo, piña, pimiento, salsa agridulce. __**Pasos:**__ saltear el pollo con los vegetales, agregar la piña y la salsa, servir con arroz.',
-            'rollitos primavera': '__**Ingredientes:**__ verduras, carne de cerdo, masa de rollitos. __**Pasos:**__ armar los rollitos con los ingredientes y freír.'
+            'ramen': '__**Ingredientes:**__ fideos, caldo, carne de cerdo, huevo. \n__**Pasos:**__ cocinar los fideos, agregar el caldo y los demás ingredientes, servir caliente.',
+            'pollo agridulce':'__**Ingredientes:**__ pollo, piña, pimiento, salsa agridulce. \n__**Pasos:**__ saltear el pollo con los vegetales, agregar la piña y la salsa, servir con arroz.',
+            'rollitos primavera': '__**Ingredientes:**__ verduras, carne de cerdo, masa de rollitos. \n__**Pasos:**__ armar los rollitos con los ingredientes y freír.'
     }
     
     # Busca la receta en el diccionario
