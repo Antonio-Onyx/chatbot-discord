@@ -80,6 +80,8 @@ class ChatBot:
             self.contexto = "MARISCOS"
         elif intent == "carne":
             self.contexto = "CARNE"
+        elif intent == 'asiatica':
+            self.contexto = "ASIATICA"     
         elif intent == 'desconocido':
             self.contexto = "DEFAULT" 
         #esto tambien lo comento porque no seria necesario
@@ -132,7 +134,9 @@ class ChatBot:
             return recomendaciones_mariscos(user_input)
         elif intent == "carne":
             return recomendaciones_carne(user_input)
-    
+        elif intent == "asiatica":
+            return recomendaciones_asiaticas(user_input)
+        
         return ''
 
 

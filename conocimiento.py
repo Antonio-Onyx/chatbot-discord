@@ -47,6 +47,7 @@ def conocimientoT():
                 r'.*no se me ocurre.*(comer|comida).*',
                 r'.*estoy indeciso.*(comer|comida).*',
                 r'.*no s(e|é).*(comer|comida)',
+                r'.*no se que.*',
                 r'.*no s(e|é).*(elige|escoge).*'
             ],
             'respuesta':[
@@ -57,14 +58,16 @@ def conocimientoT():
         {
             'intent':'recomendar',
             'regex':[
-                r'.*recomiendame.*',
+                
                 r'.*recomiendas.*',
                 r'.*recomendar.*',
+                r'.*alguna sugerencia.*',
                 r'.*tipos de comidas.*',
+                
                 r'.*qu(e|é) me.*(recomiendas|recomendar|recomendarias)'
             ],
             'respuesta':[
-                'pues se me ocurren algunas cosas que podrian llevar carne, mariscos o algun platillo vegetariano, porque es de lo único que sé preparar xd'
+                'pues se me ocurren algunas cosas que podrian llevar carne, comida asiatica, mariscos o algun platillo vegetariano, porque es de lo único que sé preparar xd'
             ]
         },
         #///////////////////////////recetas
@@ -75,6 +78,11 @@ def conocimientoT():
                 r'.*c(ó|o)mo se hace (.*)',
                 r'.*receta de (.*)',
                 r'.*c(ó|o)mo preparar (.*)',
+                r'.*me interesa saber cómo se hace (.*)',
+                r'.*dime como se hace (.*)',
+                r'.*¿podrías darmela receta de (.*)?',
+                r'.*se me antoja un(.*)',
+                r'.*muestrame la receta(.*)',
                 r'.*c(ó|o)mo hago (.*)'
             ],
             'respuesta':[                   
@@ -99,6 +107,8 @@ def conocimientoT():
             'intent': 'vegetariana',
             'regex': [
                 r'.*comida vegetariana.*',
+                r'.*recomiendame algo que no lleve carne.*',
+                r'.*recomiendame algo que sea vegetariano*',
                 r'.*comida sin carne.*'
             ],
             'respuesta': [
@@ -113,6 +123,10 @@ def conocimientoT():
                 r'(.*)cómo se hace (.*)',
                 r'.*receta de (.*)',
                 r'.*cómo preparar (.*)',
+                r'.*cómo hago (.*)',
+                r'.*me interesa saber cómo se hace (.*)',
+                r'.*¿podrías darmela receta de (.*)?',
+                r'.*se me antoja un(.*)'
                 r'.*cómo hago (.*)'
             ],
             'respuesta': [
@@ -124,7 +138,12 @@ def conocimientoT():
             'intent': 'mariscos',
             'regex': [
                 r'.*mariscos.*',
-                r'.*comida de mar.*'
+                r'.*recomiendame algo que lleve marisco*',
+                r'.*recomiendame algo que sea de mar*',
+                r'.*con pescado*',
+                r'.*de pescado*',
+                r'.*lleve pescado*',
+                r'.*comida de mar*'
             ],
             'respuesta': [
                 ''
@@ -138,6 +157,10 @@ def conocimientoT():
                 r'(.*)cómo se hace (.*)',
                 r'.*receta de (.*)',
                 r'.*cómo preparar (.*)',
+                r'.*¿dónde puedo encontrar la receta de (.*)?',
+                r'.*(.*) es lo que quiero hacer, ¿cómo se hace?',
+                r'.*podrias decirme cómo se hace (.*)?',
+                r'.*podrias darme la receta de (.*)?',
                 r'.*cómo hago (.*)'
             ],
             'respuesta': [
@@ -150,12 +173,46 @@ def conocimientoT():
             'regex': [
                 r'.*carne.*',
                 r'.*carnoso.*',
+                r'.*recomiendame algo que lleve carne.*',
                 r'.*carnivoro.*'
             ],
             'respuesta': [
                 ''
             ]
         },
+
+        ########## Agregar un nuevo intent para solicitar comida asiatica #############
+        {
+            'intent': 'asiatica',
+            'regex': [
+                r'.*comida asiatica.*',
+                r'.*recomiendame algo asiatico.*',
+                r'.*comida de asia.*'
+            ],
+            'respuesta': [
+                ''
+            ]
+        },
+        ########### Agregar un nuevo intent para solicitar la receta de comida asiatica #############
+        {
+            'intent': 'receta_asiatica',
+            'regex': [
+                r'(.*)quiero la receta de (.*)',
+                r'(.*)cómo se hace (.*)',
+                r'.*receta de (.*)',
+                r'.*cómo preparar (.*)',
+                r'.* ¿dónde puedo encontrar la receta de (.*)?',
+                r'.*(.*) es lo que quiero hacer, ¿cómo se hace?',
+                r'.*podrias decirme cómo se hace (.*)?',
+                r'.*podrias darme la receta de (.*)?',
+
+                r'.*cómo hago (.*)'
+            ],
+            'respuesta': [
+                'Aquí tienes la receta de %1: '
+            ]
+        },
+    
 
 
         #////////////////////desconocido
