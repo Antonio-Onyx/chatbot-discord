@@ -112,9 +112,9 @@ def conocimientoT():
         {
             'intent': 'vegetariana',
             'regex': [
-                r'.*comida vegetariana.*',
+                r'.*comida (vegetariana|vegana).*',
                 r'.*recomiendame algo que no lleve carne.*',
-                r'.*recomiendame algo que sea vegetariano*',
+                r'.*recomiendame algo que sea (vegetariano|vegano)*',
                 r'.*comida sin carne.*'
             ],
             'respuesta': [
@@ -157,9 +157,14 @@ def conocimientoT():
         {
             'intent': 'asiatica',
             'regex': [
-                r'.*comida asiatica.*',
-                r'.*recomiendame algo asiatico.*',
-                r'.*comida de asia.*'
+                r'.*comida asi(a|á)tica.*',
+                r'.*recomi(e|é)ndame algo asi(a|á)tico.*',
+                r'.*comida de (a|A)sia.*',
+                r'.*comida china.*',
+                r'.*comida japonesa.*'
+
+
+                
             ],
             'respuesta': [
                 ''

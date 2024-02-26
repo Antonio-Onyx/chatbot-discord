@@ -67,19 +67,14 @@ def recomendaciones_veganas(user_input):
     '''
 
     antojo = user_input.split()
-    antojo_usuario = ['vegetariano','sin carne','vegano','sin productos de origen animal']
     #recomendaciones de platillos veganos
     recom_vegana_bocchi = ['tal vez te guste una ensalada cesar',
                         'que te parece si pides una pizza vegetariana?',
                         'que tal unos tacos con frijoles? son muy vegetarianos :D',
                         'que tal un curry de verduras?'
     ]
-    
-    recom_definitiva = ''
-    for i in antojo:
-        if i in antojo_usuario:
-            recom_definitiva = random.choice(recom_vegana_bocchi)
-    return recom_definitiva
+
+    return random.choice(recom_vegana_bocchi)
 
 def recomendaciones_mariscos(user_input):
     '''
@@ -88,7 +83,6 @@ def recomendaciones_mariscos(user_input):
     '''
 
     antojo = user_input.split()
-    antojo_usuario = ['mariscos','mar','marisco','pescado']
     #recomendaciones de mariscos
     recom_mariscos_bocchi = [
                             'Se me ocurre unos camarones al ajillo',
@@ -97,11 +91,7 @@ def recomendaciones_mariscos(user_input):
                             'una sopa de mariscos seria buena idea'
     ]
     
-    recom_definitiva = ''
-    for i in antojo:
-        if i in antojo_usuario:
-            recom_definitiva = random.choice(recom_mariscos_bocchi)
-    return recom_definitiva
+    return random.choice(recom_mariscos_bocchi)
 
 def recomendaciones_asiaticas(user_input):
     '''
@@ -110,15 +100,10 @@ def recomendaciones_asiaticas(user_input):
     '''
 
     antojo = user_input.split()
-    antojo_usuario = ['asiatica','asiático','asiática','china','japonesa']
     #recomendaciones de comida asiatica
     recom_asiatica_bocchi = ['que tal un sushi?','un ramen no estaria nada mal','pollo agridulce?', 'rollitos primavera?',]
     
-    recom_definitiva = ''
-    for i in antojo:
-        if i in antojo_usuario:
-            recom_definitiva = random.choice(recom_asiatica_bocchi)
-    return recom_definitiva
+    return random.choice(recom_asiatica_bocchi)
 
 
 
