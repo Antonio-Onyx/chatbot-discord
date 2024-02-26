@@ -54,26 +54,7 @@ def conocimientoT():
                 ''
             ]
         },
-        #/////////////////////////// recomendaciones
-        {
-            'intent':'recomendar',
-            'regex':[
-                
-                r'.*recomiendas.*',
-                r'.*recomendar.*',
-                r'.*alguna sugerencia.*',
-                r'.*tipos de comidas.*',
-                
-                r'.*qu(e|é) me.*(recomiendas|recomendar|recomendar(i|í)as)',
-                r'.*recomi(e|é)ndame.*',
-                r'.*recomendaci(o|ó)n.*',
-
-
-            ],
-            'respuesta':[
-                'pues se me ocurren algunas cosas que podrian llevar carne, comida asiatica, mariscos o algun platillo vegetariano, porque es de lo único que sé preparar xd'
-            ]
-        },
+        
         #///////////////////////////recetas
         {
             'intent':'recetas',
@@ -170,6 +151,29 @@ def conocimientoT():
                 ''
             ]
         },
+
+        #/////////////////////////// recomendaciones
+        {
+            'intent':'recomendar',
+            'regex':[
+                
+                r'.*recomienda.*',
+                r'.*recomendar.*',
+                r'.*alguna sugerencia.*',
+                r'.*tipos de comidas.*',
+                
+                r'.*qu(e|é) me.*(recomiendas|recomendar|recomendar(i|í)as)',
+                r'.*recomi(e|é)ndame.*',
+                r'.*recomendaci(o|ó)n.*',
+
+
+            ],
+            'respuesta':[
+                'pues se me ocurren algunas cosas que podrian llevar carne, comida asiatica, mariscos o algun platillo vegetariano, porque es de lo único que sé preparar xd'
+            ]
+        },
+
+
         #////////////////////aceptacion
         {
             'intent':'aceptacion',
@@ -186,6 +190,7 @@ def conocimientoT():
                 '¡Fantástico! Si estás interesado, incluso puedo compartir contigo la receta ;)'
             ]
         },
+        
         #////////////////////desconocido
         {
             'intent':'desconocido',
