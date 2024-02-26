@@ -16,19 +16,7 @@ def conocimientoT():
     :rtype str 
     '''
     conocimiento = [
-        #//////////////////////////////Bienvenida
-        {
-            'intent':'bienvenida',
-            'regex':[
-                r'.*hola.*',
-                r'.*buen(a|o)s (dias|tardes|noches).',
-                r'que onda'
-            ],
-            'respuesta':[
-                'Hola! soy una IA que te puede dar recomendaciones de comida Yummi! ^_^',
-                'Hey! que onda. Soy una IA que te puede recomendar algo de comer si tú no tienes idea  Yey! ^_^'
-            ]
-        },
+        
         #////////////////////////////Fin
         {
             'intent':'terminar',
@@ -170,6 +158,20 @@ def conocimientoT():
             ],
             'respuesta':[
                 'pues se me ocurren algunas cosas que podrian llevar carne, comida asiatica, mariscos o algun platillo vegetariano, porque es de lo único que sé preparar xd'
+            ]
+        },
+
+        #//////////////////////////////Bienvenida
+        {
+            'intent':'bienvenida',
+            'regex':[
+                r'.*hola.*',
+                r'.*buen(a|o)s (dias|tardes|noches).',
+                r'que onda'
+            ],
+            'respuesta':[
+                'Hola! soy una IA que te puede dar recomendaciones de comida Yummi! ^_^',
+                'Hey! que onda. Soy una IA que te puede recomendar algo de comer si tú no tienes idea  Yey! ^_^'
             ]
         },
 
