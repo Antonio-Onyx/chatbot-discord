@@ -44,10 +44,10 @@ def conocimientoT():
             'intent':'hambre_indeciso',
             'regex':[
                 r'.*(ni idea|tengo idea).*(comida|comer).*',
-                r'.*no se me ocurre.*(comer|comida).*',
+                r'.*no s(e|é) me ocurre.*(comer|comida).*',
                 r'.*estoy indeciso.*(comer|comida).*',
                 r'.*no s(e|é).*(comer|comida)',
-                r'.*no se que.*',
+                r'.*no s(e|é) que.*',
                 r'.*no s(e|é).*(elige|escoge).*'
             ],
             'respuesta':[
@@ -64,7 +64,11 @@ def conocimientoT():
                 r'.*alguna sugerencia.*',
                 r'.*tipos de comidas.*',
                 
-                r'.*qu(e|é) me.*(recomiendas|recomendar|recomendarias)'
+                r'.*qu(e|é) me.*(recomiendas|recomendar|recomendar(i|í)as)',
+                r'.*recomi(e|é)ndame.*',
+                r'.*recomendaci(o|ó)n.*',
+
+
             ],
             'respuesta':[
                 'pues se me ocurren algunas cosas que podrian llevar carne, comida asiatica, mariscos o algun platillo vegetariano, porque es de lo único que sé preparar xd'
