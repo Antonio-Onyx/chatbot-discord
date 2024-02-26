@@ -2,9 +2,10 @@
 #  ChatBot.py                                     #
 #------------------------------------------------#
 
+
 import string, re, random, sys
 from conocimiento import conocimientoT
-from ResponseFunctions import despedida, recomendaciones
+from ResponseFunctions import *
 
 class ChatBot:
     """
@@ -70,10 +71,24 @@ class ChatBot:
         intent = caso['intent']
         if intent == 'bienvenida':
             self.contexto = "BIENVENIDA"
-        elif intent == 'hambre':
-            self.contexto = 'HAMBRE'
+        elif intent == 'recomendar':
+            self.contexto = 'RECOMENDAR'
+        elif intent == "hambre_indeciso":
+            self.contexto = "HAMBRE_INDECISO"
+        elif intent == "vegetariana":
+            self.contexto = "VEGETARIANA"
+        elif intent == "mariscos":
+            self.contexto = "MARISCOS"
+        elif intent == "carne":
+            self.contexto = "CARNE"
+        elif intent == 'asiatica':
+            self.contexto = "ASIATICA"
+        elif intent == 'recetas':
+            self.contexto = 'RECETAS' 
+        elif intent == 'informacion_nutricional':
+            self.contexto = 'INFORMACION_NUTRICIONAL'
         elif intent == 'desconocido':
-            self.contexto = "DEFAULT"  
+            self.contexto = "DEFAULT"        
 
     def convertir_respuesta(self, respuesta, caso, user_input):
         '''
@@ -89,9 +104,10 @@ class ChatBot:
         respuesta_cambiada = respuesta
         intent = caso['intent']
         match = self.regexp_selected.match(user_input)
-        if intent == 'estado':
+        if intent == 'recetas':
             respuesta_cambiada = respuesta_cambiada.replace('%1', match.group(1))
         return respuesta_cambiada
+        
 
     def acciones(self, caso, user_input):
         '''
@@ -104,10 +120,27 @@ class ChatBot:
         :rtype: str
         '''
         intent = caso['intent']
-        if intent == 'hambre':
-            return recomendaciones(user_input)
+        if intent == 'hambre_indeciso':
+            return recomendaciones_azar()
+        elif intent == 'recetas':
+            return obtener_receta(user_input)
         elif intent == 'terminar':
             return despedida(user_input)
+        elif intent == 'repetir':
+            return self.da_respuesta_apropiada(user_input)
+        elif intent == "vegetariana":
+            return recomendaciones_veganas(user_input)
+        elif intent == "mariscos":
+            return recomendaciones_mariscos(user_input)
+        elif intent == "carne":
+            return recomendaciones_carne(user_input)
+        elif intent == "asiatica":
+            return recomendaciones_asiaticas(user_input)
+        elif intent == "recetas":
+            return obtener_receta(user_input)
+        elif intent == "informacion_nutricional":
+            return obtener_infoNutricional(user_input) 
+
         return ''
 
 
@@ -119,10 +152,14 @@ class ChatBot:
         :return Texto que representa la respuesta
         :rtype str
         '''
-        if self.contexto == 'DEFAULT':
+        
+        if self.contexto == 'HAMBRE_INDECISO':
+            return 'mmmm dejame pensar... ' + recomendaciones_azar()
+        elif self.contexto == 'DEFAULT':
             return '¿Podrías tratar de expresarte mejor?'
         else:
             return '¿Podrías tratar de expresarte mejor?'
+
 
 #---------------------------------------#
 #  Base de conocimiento                 #
