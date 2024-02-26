@@ -57,6 +57,10 @@ def conocimientoT():
                 r'.*se me antoja un(.*)',
                 r'.*muestrame la receta(.*)',
                 r'.*como hago (.*)',
+                r'.*quiero saber como se hace (.*)',
+                r'.*quiero hacer (.*)',
+                r'.*quiero cocinar (.*)',
+                r'.*receta.*',
                 r'.*como preparo.* (.*)'
             ],
             'respuesta':[                   
@@ -157,7 +161,7 @@ def conocimientoT():
 
             ],
             'respuesta':[
-                'pues se me ocurren algunas cosas que podrian llevar carne, comida asiatica, mariscos o algun platillo vegetariano, porque es de lo único que sé preparar xd'
+                'Se me ocurren varias opciones que podrían incluir carne, comida asiática, mariscos o platos vegetarianos. ¿Qué tipo de comida se te antoja? ¡Dime y te daré algunos ejemplos para que elijas!'
             ]
         },
 
@@ -184,12 +188,29 @@ def conocimientoT():
                 r'.*eso me gusta.*',
                 r'.*me parece bien.*',
                 r'.*suena rico.*',
+                r'.*si*',
                 r'.*eso suena bien.*'
             ],
             'respuesta':[
-                'genial, tambien de podria dar la receta si gustas preparalo :)',
-                'Perfecto! Si quieres, también puedo proporcionarte la receta para que puedas prepararlo tú mismo. :)',
-                '¡Fantástico! Si estás interesado, incluso puedo compartir contigo la receta ;)'
+                'genial, tambien te podria dar la informacion nutricional o la receta si gustas preparalo, solo pidemelo :)',
+                'Perfecto! Si quieres, también puedo proporcionarte la receta para que puedas prepararlo tú mismo solo pidemelo que yo te la dire con gusto. :)',
+                '¡Fantástico! Si estás interesado, incluso puedo compartir contigo la receta solo necesitas pedirmela ;)'
+            ]
+        },
+
+        #//////////////////// pedir informacion nutricional
+        {
+            'intent':'informacion_nutricional',
+            'regex':[
+                r'.*informaci(o|ó)n nutricional.*',
+                r'.*calor(i|í)as.*',
+                r'.*nutrici(o|ó)n.*',
+                r'.*informaci(o|ó)n.*',
+                r'.*info*',
+                r'.*nutricional.*'
+            ],
+            'respuesta':[
+                'Claro, te puedo dar la informacion nutricional, solo dame un segundo para buscarla y te la paso'
             ]
         },
         

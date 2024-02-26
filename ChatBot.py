@@ -83,7 +83,9 @@ class ChatBot:
         elif intent == 'asiatica':
             self.contexto = "ASIATICA"
         elif intent == 'recetas':
-            self.contexto = 'RECETAS'     
+            self.contexto = 'RECETAS' 
+        elif intent == 'informacion_nutricional':
+            self.contexto = 'INFORMACION_NUTRICIONAL'
         elif intent == 'desconocido':
             self.contexto = "DEFAULT"        
 
@@ -104,6 +106,7 @@ class ChatBot:
         if intent == 'recetas':
             respuesta_cambiada = respuesta_cambiada.replace('%1', match.group(1))
         return respuesta_cambiada
+        
 
     def acciones(self, caso, user_input):
         '''
@@ -134,7 +137,9 @@ class ChatBot:
             return recomendaciones_asiaticas(user_input)
         elif intent == "recetas":
             return obtener_receta(user_input)
-        
+        elif intent == "informacion_nutricional":
+            return obtener_infoNutricional(user_input) 
+
         return ''
 
 

@@ -157,3 +157,56 @@ def obtener_receta(user_input):
             return receta  
 
     return 'Ni idea de como se prepare eso, pa'
+
+def obtener_infoNutricional(user_input):
+    '''Funcion que te devuelve la informacion nutricional del platillo que quieres'''
+
+    infoNutricional_veganas = {
+            'ensalada cesar vegetariana': 'La ensalada cesar vegetariana es baja en calorías y grasas, pero rica en fibra y vitaminas. Es una opción saludable y deliciosa para cualquier comida.',
+            'pizza vegetariana': 'La pizza vegetariana es una opción baja en calorías y grasas, pero rica en fibra y vitaminas. Es una opción saludable y deliciosa para cualquier comida.',
+            'tacos de frijoles': 'Los tacos de frijoles son una opción baja en calorías y grasas, pero rica en fibra y proteínas. Son una opción saludable y deliciosa para cualquier comida.',
+            'curry de verduras': 'El curry de verduras es una opción baja en calorías y grasas, pero rica en fibra y vitaminas. Es una opción saludable y deliciosa para cualquier comida.'
+    }
+    
+    infoNutricional_mariscos = {
+            'camarones al ajillo': 'Los camarones al ajillo son una opción baja en calorías y grasas, pero rica en proteínas y omega-3. Son una opción saludable y deliciosa para cualquier comida.',
+            'ceviche': 'El ceviche es una opción baja en calorías y grasas, pero rica en proteínas y omega-3. Es una opción saludable y deliciosa para cualquier comida.',
+            'paella': 'La paella es una opción baja en calorías y grasas, pero rica en proteínas y omega-3. Es una opción saludable y deliciosa para cualquier comida.',
+            'sopa de mariscos': 'La sopa de mariscos es una opción baja en calorías y grasas, pero rica en proteínas y omega-3. Es una opción saludable y deliciosa para cualquier comida.'
+    }
+
+    infoNutricional_carne = {
+            'carnita asada': 'La carnita asada es una opción baja en calorías y grasas, pero rica en proteínas y hierro. Es una opción saludable y deliciosa para cualquier comida.',
+            'chilaquiles con carne': 'Los chilaquiles con carne son una opción baja en calorías y grasas, pero rica en proteínas y hierro. Son una opción saludable y deliciosa para cualquier comida.',        
+            'pechuga empanizada': 'La pechuga empanizada es una opción baja en calorías y grasas, pero rica en proteínas y hierro. Es una opción saludable y deliciosa para cualquier comida.',
+            'hamburguesas caseras': 'Las hamburguesas caseras son una opción baja en calorías y grasas, pero rica en proteínas y hierro. Son una opción saludable y deliciosa para cualquier comida.',
+            'fajitas de carne': 'Las fajitas de carne son una opción baja en calorías y grasas, pero rica en proteínas y hierro. Son una opción saludable y deliciosa para cualquier comida.'
+    }
+
+    infoNutricional_asiaticas = {
+            'sushi': 'El sushi es una opción baja en calorías y grasas, pero rica en proteínas y omega-3. Es una opción saludable y deliciosa para cualquier comida.',
+            'ramen': 'El ramen es una opción baja en calorías y grasas, pero rica en proteínas y omega-3. Es una opción saludable y deliciosa para cualquier comida.',
+            'pollo agridulce': 'El pollo agridulce es una opción baja en calorías y grasas, pero rica en proteínas y omega-3. Es una opción saludable y deliciosa para cualquier comida.',
+            'rollitos primavera': 'Los rollitos primavera son una opción baja en calorías y grasas, pero rica en proteínas y omega-3. Son una opción saludable y deliciosa para cualquier comida.'
+    }
+
+    # Busca la info nutricional en el diccionario
+    for platillo, info in infoNutricional_veganas.items():
+        if platillo in user_input or user_input in platillo:
+            return info
+        
+    for platillo, info in infoNutricional_mariscos.items():
+        if platillo in user_input or user_input in platillo:
+            return info
+        
+    for platillo, info in infoNutricional_carne.items():
+        if platillo in user_input or user_input in platillo:
+            return info
+        
+    for platillo, info in infoNutricional_asiaticas.items():
+        if platillo in user_input or user_input in platillo:
+            return info
+        
+    return 'la verdad eso si no lo se, no soy nutriologa'
+
+
