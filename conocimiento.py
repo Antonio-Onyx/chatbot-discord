@@ -213,6 +213,19 @@ def conocimientoT():
                 'Claro, te puedo dar la informacion nutricional, solo dame un segundo para buscarla y te la paso'
             ]
         },
+        #//////////////////// mostrar todo lo que sabe preparar
+        {
+            'intent':'mostrar_todo',
+            'regex':[
+                r'.*que puedes hacer.*',
+                r'.*que sabes hacer.*',
+                r'.*que puedes cocinar.*',
+                r'.*que sabes cocinar.*'
+            ],
+            'respuesta':[
+                'se hacer: carnita asada, chilaquiles con filete, pechugas empanizadas, hamburguesas caseras, fajitas con tiras de carne, ensalada cesar, pizza vegetariana, tacos con frijoles, curry de verduras, camarones al ajillo, ceviche, paella, sopa de mariscos, sushi, ramen, pollo agridulce y rollitos primavera. pideme la receta de cualquiera de ellos y te la dare con gusto'
+            ]
+        },
         
         #////////////////////desconocido
         {

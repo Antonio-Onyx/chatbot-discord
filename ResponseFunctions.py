@@ -101,7 +101,10 @@ def recomendaciones_asiaticas(user_input):
 
     antojo = user_input.split()
     #recomendaciones de comida asiatica
-    recom_asiatica_bocchi = ['que tal un sushi?','un ramen no estaria nada mal','pollo agridulce?', 'rollitos primavera?',]
+    recom_asiatica_bocchi = ['que tal un sushi?',
+                             'un ramen no estaria nada mal',
+                             'pollo agridulce?', 
+                             'rollitos primavera?',]
     
     return random.choice(recom_asiatica_bocchi)
 
