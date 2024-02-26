@@ -87,6 +87,8 @@ class ChatBot:
             self.contexto = 'RECETAS' 
         elif intent == 'informacion_nutricional':
             self.contexto = 'INFORMACION_NUTRICIONAL'
+        elif intent == 'mostrar_todo':
+            self.contexto = 'MOSTRAR_TODO'    
         elif intent == 'desconocido':
             self.contexto = "DEFAULT"        
 
@@ -140,6 +142,8 @@ class ChatBot:
             return obtener_receta(user_input)
         elif intent == "informacion_nutricional":
             return obtener_infoNutricional(user_input) 
+        elif intent == "mostrar_todo":
+            return todos_platillos()
 
         return ''
 

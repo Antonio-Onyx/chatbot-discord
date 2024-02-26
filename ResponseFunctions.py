@@ -213,3 +213,12 @@ def obtener_infoNutricional(user_input):
     return 'la verdad eso si no lo se, no soy nutriologa'
 
 
+def todos_platillos ():
+    '''Funcion que te devuelve una lista con todos los platillos que conoce bocchi'''
+
+    platillos = ['ensalada cesar vegetariana', 'pizza vegetariana', 'tacos de frijoles', 'curry de verduras',
+                'camarones al ajillo', 'ceviche', 'paella', 'sopa de mariscos',
+                'carnita asada', 'chilaquiles con carne', 'pechuga empanizada', 'hamburguesas caseras', 'fajitas de carne',
+                'sushi', 'ramen', 'pollo agridulce', 'rollitos primavera']
+    
+    return platillos
