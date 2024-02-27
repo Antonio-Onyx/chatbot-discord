@@ -23,10 +23,10 @@ def recomendaciones_azar():
     da recomendaciones de comida al azar
     '''
     #recomendaciones de platillos que lleven carne
-    recom_comida_bocchi = ['no estaria mal que preparas una carnita asada ᕙ(`▿´)ᕗ',
-                    'que tal unos chilaquiles con carne? ᕙ(`▿´)ᕗ',
+    recom_comida_bocchi = ['que tal una carnita asada? ᕙ(`▿´)ᕗ ',
+                    'que tal unos chilaquiles con carne? ᕙ(`▿´)ᕗ ',
                     'mmm ... que te parece una pechuga empanizada? ^_^',
-                    'tal vez te guste una ensalada cesar ｡◕‿◕｡',
+                    'tal vez te guste una ensalada cesar? ｡◕‿◕｡',
                     'que te parece una pizza vegetariana?',
                     'que tal unos tacos con frijoles? ^_^',
                     'que tal un curry de verduras? :o',
@@ -38,7 +38,7 @@ def recomendaciones_azar():
                     'un ramen no estaria nada mal ;)',
                     'pollo agridulce? (ㆆ_ㆆ)',
                     'rollitos primavera?',
-                    'unas fajitas de carne :p',
+                    'unas fajitas de carne :p ?',
                     'Qué opinas de hacer unas Hamburguesas caseras? ( ͡° ͜ʖ ͡°)'
 
     ]
@@ -52,7 +52,7 @@ def recomendaciones_carne(user_input):
     el usuario quiere algo que lleve carne
     '''
     #recomendaciones de platillos con carne
-    recom_carne_bocchi = ['no estaria mal que preparas una carnita asada',
+    recom_carne_bocchi = ['que te parece una carnita asada?',
                         'que tal unos chilaquiles con un filete de carne roja? UwU',
                         'mmm ... que te parece una pechuguita empanizada con sus papitas? c:',
                         'Qué opinas de hacer unas Hamburguesas caseras?',

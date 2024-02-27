@@ -174,8 +174,8 @@ def conocimientoT():
                 r'que onda'
             ],
             'respuesta':[
-                'Hola! soy una IA que te puede dar recomendaciones de comida Yummi! ^_^',
-                'Hey! que onda. Soy una IA que te puede recomendar algo de comer si tú no tienes idea  Yey! ^_^'
+                'Hola! soy una IA que te puede dar recomendaciones de comida Yummi! ^_^ solo pideme recomendaciones o la receta de algo que te guste',
+                'Hey! que onda. Soy una IA que te puede recomendar algo de comer si tú no tienes idea  Yey! ^_^ solo pidemelo y con gusto te recomendare platillos'
             ]
         },
 
@@ -188,11 +188,11 @@ def conocimientoT():
                 r'.*eso me gusta.*',
                 r'.*me parece bien.*',
                 r'.*suena rico.*',
-                r'.*si*',
+                r'.*si.*',
                 r'.*eso suena bien.*'
             ],
             'respuesta':[
-                'genial, tambien te podria dar la informacion nutricional o la receta si gustas preparalo, solo pidemelo :)',
+                'genial, tambien te podria dar la receta si gustas preparalo, solo pidemelo :)',
                 'Perfecto! Si quieres, también puedo proporcionarte la receta para que puedas prepararlo tú mismo solo pidemelo que yo te la dire con gusto. :)',
                 '¡Fantástico! Si estás interesado, incluso puedo compartir contigo la receta solo necesitas pedirmela ;)'
             ]
